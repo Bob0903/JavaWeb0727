@@ -58,13 +58,12 @@ public class TestServlet extends HttpServlet{
                         fileStr.length());
                 if(fileFormat.indexOf(suffixStr.toUpperCase()) != -1){
                     newPath = newPath + "/" + fileStr;
-//                    copyFile(file,newPath);
+                    copyFile(file,newPath);
                     System.out.println(fileStr);
                     String imagePath = "/JavaWeb0727/servlet/image?fname=" + fileStr;
                     out.println(String.format("<p><img width='150' src='%s'>", imagePath));
                 }
             }
-        
         }
         //file.delete(); //刪除!!!!! 根目錄,慎操作
         //獲取完整路徑
